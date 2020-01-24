@@ -42,6 +42,6 @@ while(repetir == "sim"){
     idade = prompt("Informe sua idade:");
     resposta = (idade>=18) ? "Maior" : "Menor";
     document.write("<br><br>Olá " + nome + ", você é " + resposta + " de idade.");
-    
+
     repetir = prompt("Deseja repetir? sim ou não?");
 }
