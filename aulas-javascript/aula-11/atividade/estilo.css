@@ -1,0 +1,18 @@
+html, body{
+    margin: 0;
+}
+
+.botoes-banner li a{
+    display: inline-block;
+    padding: 10px;
+}
+
+.botoes-banner li {
+    display: inline-block;
+    border: 1px solid ;
+}
+
+.botoes-banner{
+    text-align: center;
+    list-style: none;
+}

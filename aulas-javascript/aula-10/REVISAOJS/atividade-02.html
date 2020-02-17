@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Revisão JS - 2</title>
+</head>
+<body onload="BemVindo();">
+    <span id="mensagem"></span>
+    <form>
+        <label for="produto">Produto</label>
+        <input id="produto"> <br>
+        <label for="quantidade">Quantidade</label>
+        <input type="number" id="quantidade" onchange="CalcularPreco();"><br>
+        <label for="preco">Preço</label>
+        <input type="number" id="preco" onchange="CalcularPreco();"><br>
+        <span id="total-produto"></span>
+        <br>
+        <button type="button" onclick="AdicionarAoCarrinho();">Adicionar</button>
+    </form>
+    <table id="lista-produtos">
+        <tr>
+            <td>Produto</td>
+            <td>Quantidade</td>
+            <td>Preço</td>
+            <td>Total</td>
+        </tr>
+    </table>
+    <span id="total-geral"></span>
+    <script src="js/atividade-02.js"></script> 
+</body>
+</html>
