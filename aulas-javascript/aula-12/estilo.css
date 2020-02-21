@@ -1,8 +1,25 @@
+h2{
+    cursor: pointer;
+}
+
+h2:hover{
+    color: aqua;
+}
+
 .aberto{
-    height: 200px;
+    max-height: 200px;
+    background-color: aqua;
+    transition: max-height 1s ease-in-out;
+    padding-left: 10px;
 }
 
 .fechado{
-    height: 0;
-    display: none;
+    max-height: 0;
+    background-color: aqua;
+    padding-left: 10px;
+    transition: max-height 1s ease-in-out;
+}
+
+div{
+    overflow: hidden;
 }
