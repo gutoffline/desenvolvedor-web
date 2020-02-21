@@ -1,0 +1,8 @@
+.aberto{
+    height: 200px;
+}
+
+.fechado{
+    height: 0;
+    display: none;
+}
