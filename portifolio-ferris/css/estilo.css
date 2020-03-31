@@ -1,5 +1,4 @@
-
-body{
+body {
     font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-size: 13px;
     line-height: 20px;
@@ -10,12 +9,12 @@ body{
 
 /*CONFIGURAÇÃO DO TOPO - INÍCIO*/
 
-header{
+header {
     margin-bottom: 25px;
     background: url('../imagens/bg_header.jpg');
 }
 
-#topo-twitter{
+#topo-twitter {
     width: 700px;
     height: 60px;
     margin: 0 auto;
@@ -23,28 +22,28 @@ header{
 }
 
 
-#topo-titulo{
+#topo-titulo {
     width: 900px;
     height: 80px;
     margin: 0 auto;
     padding-top: 25px;
 }
 
-.tweet-texto{
+.tweet-texto {
     color: #fff;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     text-shadow: 0 -1px 0 #000;
 }
 
-.tweet-data{
+.tweet-data {
     color: #e3baca;
     font-size: 12px;
     padding-left: 6px;
 }
 
 
-header h1{
+header h1 {
     width: 454px;
     height: 53px;
     text-indent: -9000px;
@@ -57,25 +56,27 @@ header h1{
 
 /*CONFIGURAÇÃO DO CONTEÚDO - INÍCIO*/
 
-#conteudo{
+#conteudo {
     width: 900px;
     margin: 0 auto;
 }
 
-#conteudo-descricao{
+#conteudo-descricao {
     width: 400px;
     text-shadow: 0 1px 0 #fff;
     padding-bottom: 40px;
+    display: inline-block; 
+    vertical-align: top;
 }
 
-.conteudo-duas-colunas{
+.conteudo-duas-colunas {
     column-count: 2;
     column-gap: 30px;
     margin-top: 20px;
     text-align: justify;
 }
 
-.conteudo-duas-colunas p{
+.conteudo-duas-colunas p {
     line-height: 18px;
     font-size: 14px;
 }
@@ -83,7 +84,7 @@ header h1{
 
 
 
-#conteudo-descricao h3{
+#conteudo-descricao h3 {
     margin-bottom: 15px;
     color: #949691;
     font-size: 18px;
@@ -91,7 +92,7 @@ header h1{
 }
 
 
-#icones-sociais{
+#icones-sociais {
     border-top: 2px dashed #aaa19f;
     width: 185px;
     height: 55px;
@@ -99,29 +100,108 @@ header h1{
     margin-top: 10px;
 }
 
-#icones-sociais li{
+#icones-sociais li {
     display: inline-block;
 }
 
-#icones-sociais li a{
+#icones-sociais li a {
     width: 59px;
     height: 55px;
     display: block;
     float: left;
-    
-
+    text-indent: -9000px;
 }
 
-.bt-twitter{
+
+.bt-twitter {
     background: url('../imagens/social_icons.png') 2px top no-repeat;
+    transition: all 0.3s ease-out;
 }
 
-.bt-facebook{
+.bt-twitter:hover {
+    background: url('../imagens/social_icons.png') 2px -56px no-repeat;
+}
+
+.bt-facebook {
     background: url('../imagens/social_icons.png') -59px top no-repeat;
+    transition: all 0.3s ease-out;
 }
 
-.bt-linkedin{
+.bt-facebook:hover {
+    background: url('../imagens/social_icons.png') -59px -58px no-repeat;
+}
+
+.bt-linkedin {
     background: url('../imagens/social_icons.png') -121px top no-repeat;
+    transition: all 0.3s ease-out;
+}
+
+.bt-linkedin:hover {
+    background: url('../imagens/social_icons.png') -121px -57px no-repeat;
+}
+
+
+.campo,
+.mensagem {
+    width: 96%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    color: #6c595f;
+    box-shadow: inset 1px 1px 2px #999;
+}
+
+.mensagem {
+    height: 100px;
+}
+
+.enviar {
+    background: #6c595f;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    float: right;
+}
+
+
+#conteudo-portifolio{
+    width: 410px;
+    display: inline-block;
+    padding-bottom: 40px;
+    margin-left: 40px;
+}
+
+#conteudo-portifolio figure{
+    width: 440px;
+}
+
+.link-thumbs{
+    width: 190px;
+    height: 156px;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 0 20px 20px 0;
+    text-decoration: none;
+    box-shadow: 1px 1px 2px #999;
+    opacity: 0.6;
+}
+
+.link-thumbs:hover{
+    opacity: 1;
+    transform: rotate(-15deg);
+}
+
+#meu-video{
+    width: 380px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #c9cec8;
+    box-shadow: 1px 1px 2px #999;
 }
 
 /*CONFIGURAÇÃO DO CONTEÚDO - FIM*/
@@ -129,7 +209,7 @@ header h1{
 
 /*CONFIGURAÇÃO DO RODAPÉ - INÍCIO*/
 
-footer p{
+footer p {
     font-size: 11px;
     line-height: 18px;
     text-shadow: 0 1px 0 #fff;
