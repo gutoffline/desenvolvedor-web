@@ -1,0 +1,37 @@
+.botao{
+    background-color: none;
+    border: 1px solid #212c34;
+    color: #fb5870;
+    transition: all 0.3s ease-out;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.botao:hover{
+    background-color: #fb5870;
+    border: 1px solid #fb5870;
+    color: #fff;
+}
+
+.campo{
+    background-color: none;
+    border: 1px solid #212c34;
+    border-radius: 0;
+    color: #fb5870;
+    padding: 10px 5px;
+    font-size: 14px;
+}
+
+table{
+    border: 1px solid;
+    width: 80%;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+th,td{
+    padding: 5px;
+    border: 1px solid;
+}
