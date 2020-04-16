@@ -13,7 +13,12 @@
     <h1>Estacionamento</h1>
     <input id="placa" class="campo" placeholder="PLACA">
     <input id="modelo" class="campo" placeholder="MODELO">
-    <input id="marca" class="campo" placeholder="MARCA">
+    <select id="marca" class="campo">
+        <option value="">MARCA</option>
+        <option value="ford">Ford</option>
+        <option value="fiat">Fiat</option>
+        <option value="honda">Honda</option>
+    </select>
     <button class="botao" id="adicionar-veiculo">Adicionar Veículo</button>
 
     <ul id="lista-erros"></ul>
@@ -24,6 +29,8 @@
                 <th>Placa</th>
                 <th>Modelo</th>
                 <th>Marca</th>
+                <th>Hora de Entrada</th>
+                <th>&nbsp;</th>
             </tr>
         </thead>
         <tbody>

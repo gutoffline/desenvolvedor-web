@@ -1,9 +1,8 @@
-
 function TrocaModelo(modelo){
     if(modelo == "Teixeira"){
         const nomeEstacionamento = "Estacionamento Teixeira";
         const corFundo = "#f3c9dd";
-        
+
         document.querySelector("h1").innerText = nomeEstacionamento ;
         document.querySelector("body").style.backgroundColor = corFundo;
     }else{
@@ -37,10 +36,19 @@ function AdicionarVeiculo(){
     let placa = document.querySelector("#placa").value;
     let modelo = document.querySelector("#modelo").value;
     let marca = document.querySelector("#marca").value;
-
-    let linha = "<tr><td>" + placa + "</td><td>" + modelo + "</td><td>" + marca + "</td></tr>";
+    let hora = MontaHora();
+    let linha = "<tr><td>" + placa + "</td><td>" + modelo + "</td><td>" + marca + "</td>";
+    linha += "<td>" + hora + "</td>";
+    linha += "<td><img src='imagens/checkout.png' alt='fechamento' class='checkout'></td></tr>";
 
     document.querySelector("#veiculos-ativos tbody").innerHTML += linha;
+}
+
+function MontaHora(){
+    let dataCompleta = new Date();
+    let hora = dataCompleta.getHours();
+    let minutos = dataCompleta.getMinutes();
+    return hora + ":" + minutos;
 }
 
 function LimparCampos(){
@@ -87,7 +95,35 @@ botaoAdicionarVeiculo.onclick = (function(){
         LimparCampos();
     }
 });
-// botaoTeixeira.addEventListener("click",Modelo1);
-// botaoJandira.addEventListener("click",Modelo2);
 
 
+function FazerCheckout(elemento){
+    let tdPai = elemento.parentElement;
+
+    let horaEntrada = tdPai.previousSibling.innerHTML;
+
+    alert("TOTAL À PAGAR: \n" + CalcularValorPagar(horaEntrada));
+
+    let trPai = tdPai.parentElement;
+    trPai.remove();
+}
+
+function CalcularValorPagar(horaEntrada){
+    let hora = horaEntrada.split(":");
+    
+    horaEntrada = hora[0];
+
+    let dataCompleta = new Date();
+    horaSaida = dataCompleta.getHours();
+    horaSaida += 1;
+
+    let totalPagar = (horaSaida - horaEntrada) * 3;
+    return "R$ " + totalPagar;
+}
+
+
+document.addEventListener('click',function(e){
+    if(e.target && e.target.className== 'checkout'){
+        FazerCheckout(e.target);
+    }
+});
