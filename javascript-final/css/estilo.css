@@ -60,3 +60,25 @@ th,td{
 }
 
 
+#formulario-empresa{
+    display: none;
+}
+
+
+.painel-vagas{
+    margin:20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#vagas-total{
+    color: darkgreen;
+}
+
+#vagas-livres{
+    color: darkblue;
+}
+
+#vagas-utilizadas{
+    color: darkred;
+}

@@ -92,6 +92,7 @@ botaoAdicionarVeiculo = document.querySelector("#adicionar-veiculo");
 botaoAdicionarVeiculo.onclick = (function(){
     if(ValidarCamposVeiculo()){
         AdicionarVeiculo();
+        AtualizaPainel();
         LimparCampos();
     }
 });
@@ -127,3 +128,53 @@ document.addEventListener('click',function(e){
         FazerCheckout(e.target);
     }
 });
+
+
+function ExibirOuOcultarFormularios(formularioExibir){
+    document.querySelector("#formulario-empresa").style.display="none";
+    document.querySelector("#formulario-individual").style.display="none";
+    
+    document.querySelector(formularioExibir).style.display="block";
+}
+
+let radioIndividual = document.querySelector("#exibir-individual");
+let radioEmpresa = document.querySelector("#exibir-empresa");
+
+radioIndividual.onclick = (function(e){
+    ExibirOuOcultarFormularios("#formulario-individual");
+});
+
+radioEmpresa.onclick = (function(e){
+    ExibirOuOcultarFormularios("#formulario-empresa");
+});
+
+botaoEfetuarReserva = document.querySelector("#efetuar-reserva");
+botaoEfetuarReserva.onclick = (function(){
+    EfetuarReservaEmpresa();
+    AtualizaPainel();
+});
+
+function EfetuarReservaEmpresa(){
+    let horaEntrada = MontaHora();
+    let nomeEmpresa = document.querySelector("#nome-empresa").value;
+    let condicao = document.querySelector("#quantidade-reservar").value;
+
+    for(let i = 1 ; i <= condicao ; i++){
+        let linha = "<tr><td colspan='3'>"+ nomeEmpresa +"</td><td>" + horaEntrada + "</td><td><img src='imagens/checkout.png' alt='fechamento' class='checkout'></td></tr>";
+        document.querySelector("#veiculos-ativos").innerHTML += linha;
+    }
+}
+
+
+function AtualizaPainel(){
+    var tabela = document.querySelector('#veiculos-ativos');
+    var linhas = tabela.getElementsByTagName('tr');
+    let vagasTotal = document.querySelector("#vagas-total").innerText;
+    let vagasUtilizadas = linhas.length - 1;
+    let vagasLivres = vagasTotal - vagasUtilizadas;
+
+    document.querySelector("#vagas-livres").innerText = vagasLivres;
+    document.querySelector("#vagas-utilizadas").innerText = vagasUtilizadas;
+    
+}
+
