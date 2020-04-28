@@ -1,0 +1,84 @@
+.botao{
+    background-color: none;
+    border: 1px solid #212c34;
+    color: #fb5870;
+    transition: all 0.3s ease-out;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.botao:hover{
+    background-color: #fb5870;
+    border: 1px solid #fb5870;
+    color: #fff;
+}
+
+.campo{
+    background-color: none;
+    border: 1px solid #212c34;
+    border-radius: 0;
+    color: #fb5870;
+    padding: 10px 5px;
+    font-size: 14px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fb5870;
+    opacity: 1; /* Firefox */
+  }
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: #fb5870;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+color: #fb5870;
+}
+
+select.campo{
+    width: 200px;
+}
+
+table{
+    border: 1px solid;
+    width: 80%;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+th,td{
+    padding: 5px;
+    border: 1px solid;
+}
+
+
+.checkout{
+    width: 18px;
+    cursor: pointer;
+}
+
+
+#formulario-empresa{
+    display: none;
+}
+
+
+.painel-vagas{
+    margin:20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#vagas-total{
+    color: darkgreen;
+}
+
+#vagas-livres{
+    color: darkblue;
+}
+
+#vagas-utilizadas{
+    color: darkred;
+}
