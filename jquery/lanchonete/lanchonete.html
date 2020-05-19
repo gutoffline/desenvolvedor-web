@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lanchonete</title>
+    <meta charset="utf-8">
+    <link href="lib/pure-min.css" rel="stylesheet">
+    <script src="lib/jquery-3.5.0.js"></script>
+
+    <!-- PLUGIN LIGHTBOX Avgrund-->
+    <link href="lib/avgrund.js/style/avgrund.css" rel="stylesheet">
+    <script src="lib/avgrund.js/jquery.avgrund.js"></script>
+
+    <!-- PLUGIN NIVO SLIDER -->
+    <link href="lib/Nivo-Slider/themes/default/default.css" rel="stylesheet">
+    <link href="lib/Nivo-Slider/nivo-slider.css" rel="stylesheet">
+    <script src="lib/Nivo-Slider/jquery.nivo.slider.js"></script>
+
+    <!--PLUGIN MODAL-->
+    <!-- <link href="lib/modal/jquery.modal.css" rel="stylesheet">
+        <script src="lib/modal/jquery.modal.js"></script> -->
+
+    <!-- PLUGIN MODAL FANCY-->
+    <link href="lib/fancybox/dist/jquery.fancybox.css" rel="stylesheet">
+    <script src="lib/fancybox/dist/jquery.fancybox.js"></script>
+
+
+    <!-- PLUGIN SLICK-->
+    <link href="lib/slick/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick/slick-theme.css" rel="stylesheet">
+    <script src="lib/slick/slick/slick.js"></script>
+
+    <!-- TAB CONTENT-->
+    <link href="lib/multipurpose_tabcontent/css/style.css" rel="stylesheet">
+    <script src="lib/multipurpose_tabcontent/js/jquery.multipurpose_tabcontent.js"></script>
+
+
+    <link href="estilo.css" rel="stylesheet">
+    <script src="funcoes.js"></script>
+</head>
+
+<body>
+    <div id="slider" class="nivoSlider theme-default">
+        <img src="img/natal1.jpg">
+        <img src="img/natal2.jpg">
+        <img src="img/natal3.jpg">
+        <img src="img/natal4.jpg">
+    </div>
+
+    <h1>Lanchonete</h1>
+
+    <div class="tab_wrapper abas">
+        <ul class="tab_list">
+            <li class="active">CARDÁPIO</li>
+            <li>ENDEREÇO</li>
+        </ul>
+
+        <div class="content_wrapper">
+            <div class="tab_content active">
+
+                <button id="botao-cardapio" class="pure-button pure-button-primary">CARDÁPIO</button>
+                <div class="cardapio-conteudo">
+                    <strong>Cardápio da lanchonete</strong>
+                    <ul>
+                        <li>lanche</li>
+                    </ul>
+                </div>
+
+                <div id="destaque" style="display: none;">
+                    <h3>DESTAQUE DO DIA</h3>
+                    <img src="img/lanche1.png">
+                </div>
+
+                <a data-fancybox data-src="#destaque" href="javascript:;"
+                    class="pure-button pure-button-primary">DESTAQUE</a>
+
+                <button id="cardapio-completo" class="pure-button pure-button-primary">CARDÁPIO COMPLETO</button>
+                <button id="cardapio-online" class="pure-button pure-button-primary">CARDÁPIO ONLINE</button>
+                <div id="cardapio-completo-lista"></div>
+            </div>
+
+            <div class="tab_content">
+                <form class="pure-form">
+                    <input id="cep" placeholder="CEP">
+                    <button type="button" class="pure-button pure-button-primary" id="botao-busca-cep">Pesquisar</button>
+                </form>
+                <div id="endereco-completo"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="width: 500px; margin: 0 auto;">
+        <div class="galeria">
+            <img src="img/lanche1.png">
+            <img src="img/lanche2.png">
+            <img src="img/lanche3.jpg">
+            <img src="img/lanche4.png">
+            <img src="img/lanche5.jpg">
+            <img src="img/lanche6.jpg">
+            <img src="img/lanche7.jpg">
+        </div>
+    </div>
+</body>
+
+</html>
