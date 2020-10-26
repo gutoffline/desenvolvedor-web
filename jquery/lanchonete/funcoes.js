@@ -72,11 +72,16 @@ $(document).ready(function(){
 
     $('#botao-busca-cep').click(function(){
         let cep = $('#cep').val();
+        $('#endereco-completo').html('');
         $.ajax({
             url: 'https://viacep.com.br/ws/'+cep+'/json',
             success: function(conteudo){
                 console.dir(conteudo);
-                $('#endereco-completo').html('Rua: ' + conteudo.logradouro);
+                $('#endereco-completo img').remove();
+                $('#endereco-completo').append('<span class="rua">Rua: ' + conteudo.logradouro + "</span>");
+                $('#endereco-completo').append('<br><span class="bairro">Bairro: ' + conteudo.bairro + "</span>");
+                $('#endereco-completo').append('<br><span class="cidade">Cidade: ' + conteudo.localidade + "</span>");
+                $('#endereco-completo').append('<br><span class="uf">Estado: ' + conteudo.uf + "</span>");
             },
             beforeSend: function(){
                 $('#endereco-completo').html('<img src="img/carregando.gif">');
@@ -86,4 +91,15 @@ $(document).ready(function(){
             }
         });
     });
+
+
+    $('#imprimir').click(function(){
+        let doc = new jsPDF();
+        doc.text($('.rua').html(),10,10);
+        doc.text($('.bairro').html(),10,20);
+        doc.text($('.cidade').html(),10,30);
+        doc.text($('.uf').html(),10,40);
+        doc.save('destino.pdf');
+    });
+
 });

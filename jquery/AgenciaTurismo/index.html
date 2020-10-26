@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência de Turismo</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link href="lib/materialize/css/materialize.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="imagens/logo.png" width="50" class="brand-logo">
+            <a href="#" data-target="menu-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#destinos">DESTINOS</a></li>
+                <li><a href="#pacotes">PACOTES</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <ul class="sidenav" id="menu-mobile">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="imagens/fundo.jpg">
+                    </div>
+                    <img src="imagens/pessoa.jpg" class="circle">
+                    <span class="white-text name">Tony Stark</span>
+                    <span class="white-text email">tony@agenciaturismo.com.br</span>
+                    <span class="white-text"><i class="tiny material-icons">phone</i> 19 99999-9999 </span>
+                </div>
+
+            </li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#destinos">DESTINOS</a></li>
+            <li><a href="#pacotes">PACOTES</a></li>
+            <li><a href="#contato">CONTATO</a></li>
+        </ul>
+    </header>
+
+
+    <div id="banner" class="center-align">
+        <div class="carousel carousel-slider">
+            <a href="#" class="carousel-item">
+                <img src="imagens/machupichu.jpg" class="responsive-img">
+            </a>
+
+            <a href="#" class="carousel-item">
+                <img src="imagens/chile.jpg" class="responsive-img">
+            </a>
+
+            <a href="#" class="carousel-item">
+                <img src="imagens/cartagena.jpg" class="responsive-img">
+            </a>
+
+            <a href="#" class="carousel-item">
+                <img src="imagens/chapada.jpg" class="responsive-img">
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="red-text">Destinos</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra posuere augue, id vehicula sapien semper
+            sit amet. Maecenas fermentum magna erat, non posuere dui mollis sit amet. Cras bibendum dolor dui, id congue
+            libero sodales vel. Mauris accumsan erat sed leo pretium eleifend. Sed dignissim cursus lectus. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra posuere augue, id vehicula sapien semper
+            sit amet. Maecenas fermentum magna erat, non posuere dui mollis sit amet. Cras bibendum dolor dui, id congue
+            libero sodales vel. Mauris accumsan erat sed leo pretium eleifend. Sed dignissim cursus lectus. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra posuere augue, id vehicula sapien semper
+            sit amet. Maecenas fermentum magna erat, non posuere dui mollis sit amet. Cras bibendum dolor dui, id congue
+            libero sodales vel. Mauris accumsan erat sed leo pretium eleifend. Sed dignissim cursus lectus. </p>
+
+        <div class="row">
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="imagens/chapada.jpg" class="responsive-img">
+                        <span class="card-title">Chapada Diamantina</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Maecenas fermentum magna erat, non posuere dui mollis sit amet.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Conheça mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="imagens/chile.jpg" class="responsive-img">
+                        <span class="card-title">Chile</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Maecenas fermentum magna erat, non posuere dui mollis sit amet.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Conheça mais</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="imagens/cartagena.jpg" class="responsive-img">
+                        <span class="card-title">Cartagena</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Maecenas fermentum magna erat, non posuere dui mollis sit amet.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Conheça mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="center-align">
+            <a href="#mais-informacoes" class="waves-effect waves-light btn-large modal-trigger">MAIS INFORMAÇÕES</a>
+        </div>
+
+        <div id="mais-informacoes" class="modal">
+            <div class="modal-content">
+                <h4>PACOTES</h4>
+                <p>Nossos pacotes incluem passagem, hospedagem e translado.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+            </div>
+        </div>
+
+        <h3>Contato</h3>
+        <form>
+            <input id="nome">
+            <label for="nome">Nome completo</label>
+            <input type="email" id="email">
+            <label for="email">E-mail</label>
+            <textarea placeholder="Mensagem"></textarea>
+            <button class="btn"><i class="material-icons left">directions_run</i>Enviar</button>
+        </form>
+    </div>
+    
+    <footer class="red lighten-1">
+        <div class="row">
+            <div class="col">
+                <p class="white-text">Agência de Turismo. </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="lib/jquery-3.5.0.js"></script>
+    <script src="lib/materialize/js/materialize.min.js"></script>
+    <script src="funcoes.js"></script>
+</body>
+
+</html>
